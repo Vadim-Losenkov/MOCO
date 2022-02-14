@@ -50,6 +50,74 @@
       background-image: url('../images/icons/phone.svg');
     }
   }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 0;
+  }
+  
+  &__contact {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__contact-link {
+    
+  }
+  &__contact-button {
+    margin-left: 20px;
+    padding: 10px 25px;
+  }
+  
+  &__menu {
+    max-width: 475px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 20px;
+  }
+  &__menu-link {
+    padding-bottom: 3px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #313137;
+    
+    &.active {
+      color: $green;
+      border-bottom: 1.5px solid $green;
+      font-weight: 600;
+      border-radius: 1px;
+    }
+  }
 }
+
+.top {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    max-width: 620px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 66px;
+    color: #313137;
+    margin-bottom: 18px;
+  }
+  &__text {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 31px;
+    color: #565656;
+    margin-bottom: 50px;
+  }
+}
+
 
 @import "media";
