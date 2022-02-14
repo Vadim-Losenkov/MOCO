@@ -4,14 +4,52 @@
 @import "global";
 @import "libs";
 
+.header {
+  &__top {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+    padding: 10px 0;
+  }
+  &__top-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+    opacity: 0.8;
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding-left: 28px;
+    position: relative;
 
-
-
-
-
-
-
-
-
+    &::before {
+      content: "";
+      background-image: url('../images/icons/mail.svg');
+      width: 18px;
+      height: 18px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__top-phone {
+    margin-left: 60px;
+    &::before {
+      background-image: url('../images/icons/phone.svg');
+    }
+  }
+}
 
 @import "media";
