@@ -318,4 +318,53 @@
   }
 }
 
+.troubles {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    grid-gap: 69px;
+    margin-left: 60px;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #313137;
+    margin-bottom: 6px;
+  }
+  &__item-text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #313137;
+    opacity: 0.8;
+  }
+  &__item-check {
+    margin-bottom: 15px;
+  }
+  &__item-num {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 188px;
+    line-height: 220px;
+    color: rgba(42, 42, 47, 0.5);
+    opacity: 0.1;
+    
+    position: absolute;
+    left: -60px;
+    top: -30px;
+  }
+}
+
 @import "media";
