@@ -17,6 +17,15 @@ $(function() {
     },
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
+
+  $('.header__burger').on('click', function(e) {
+    // $(this).toggleClass('open')
+    $('.header-mobile').toggleClass('open')
+  })
+  $('.header-mobile__close').on('click', function(e) {
+    // $(this).toggleClass('open')
+    $('.header-mobile').toggleClass('open')
+  })
 })
 
 
