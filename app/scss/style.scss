@@ -214,12 +214,14 @@
     line-height: 29px;
     color: #313137;
     margin-bottom: 4px;
+    white-space: nowrap;
   }
   &__banner-text {
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     color: #313137;
+    white-space: nowrap;
   }
 }
 
