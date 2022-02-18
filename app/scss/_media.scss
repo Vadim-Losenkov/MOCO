@@ -27,6 +27,12 @@
       }
     }
   }
+  
+  .troubles {
+    &__box {
+      display: block;
+    }
+  }
 }
 @media (max-width: 1085px) {
   .header {
@@ -114,6 +120,173 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .tariff {
+    &__table-col {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__table-col img {
+      width: 20px;
+      height: 20px;
+    }
+    &__table-head {
+      .tariff__table-col {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .top {
+    &__banner {
+      bottom: -200px;
+      position: static;
+    }
+    &__info {
+      margin-top: 0;
+    }
+    &__image {
+      order: -1;
+    }
+    &__info-title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 20px;
+    }
+    &__info-text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    &__info {
+      max-width: 563px;
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info-link {
+      img {
+        display: none;
+      }
+    }
+  }
+  .consultation {
+    &__image {
+      display: none;
+    }
+    &__info {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .troubles {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__items {
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .top {
+    margin-bottom: 0;
+  }
+  .face {
+    margin-bottom: 50px;
+    &__image {
+      display: none;
+    }
+    &__image-mobile {
+      display: block;
+      margin: 0 auto;
+    }
+    &__info {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .benefits {
+    &__box {
+      justify-content: center;
+    }
+    &__item {
+      width: 100%;
+      max-width: 47%;
+    }
+  }
+  
+  .about {
+    &__inner {
+      display: block;
+    }
+    &__box {
+      margin-bottom: 24px;
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .product {
+    margin-bottom: 50px;
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin-bottom: 24px;
+    }
+  }
+  .consultation {
+    margin-bottom: 50px;
+  }
+  .troubles {
+    overflow: hidden;
+    &__items {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+    }
+    &__item {
+      max-width: 100%;
+      width: 100%;
+      padding-right: 60px;
+      margin-bottom: 70px;
+    }
+  }
+  body {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (max-width: 650px) {
+  .about {
+    &__title {
+      text-align: center;
+    }
+    &__info p {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
 @media (max-width: 500px) {
   .top {
     &__banner-title {
@@ -127,4 +300,98 @@
       white-space: normal;
     }
   }
+  
+  .face {
+    &__title {
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: left;
+    }
+    &__name {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 8px;
+      width: 100%;
+      text-align: left;
+    }
+    &__subname {
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 24px;
+      width: 100%;
+      text-align: left;
+    }
+    &__image-mobile {
+      margin-bottom: 0;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: -10px;
+    }
+  }
+  .product {
+    &__item-title {
+      font-size: 19px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+    &__item-text {
+      font-size: 16px;
+    }
+    &__item {
+      max-width: 100%;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  .troubles {
+    &__item-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    &__item-text {
+      font-size: 14px;
+    }
+    &__item-num {
+      font-size: 188px;
+    }
+  }
+  .benefits {
+    margin-bottom: 50px;
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+    &__box {
+      column-gap: 6px;
+    }
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__item-title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__item-text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  .tariff {
+    &__warning {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 }
+

@@ -30,7 +30,14 @@ $(function() {
 
 
 new Swiper('.team__slider', {
-  slidesPerView: 4,
+  breakpoints: {
+        // when window width is <= 499px
+        1200: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 30
+        },
+  },
+  // slidesPerView: 4,
   spaceBetween: 30,
   navigation: {
     nextEl: '.team__arrows-right',
