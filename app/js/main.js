@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   if ($(".reviews__item-rate").length) {
     $(".reviews__item-rate").rateYo({
       readOnly: true,
@@ -18,11 +18,11 @@ $(function() {
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
-  $('.header__burger').on('click', function(e) {
+  $('.header__burger').on('click', function (e) {
     // $(this).toggleClass('open')
     $('.header-mobile').toggleClass('open')
   })
-  $('.header-mobile__close').on('click', function(e) {
+  $('.header-mobile__close').on('click', function (e) {
     // $(this).toggleClass('open')
     $('.header-mobile').toggleClass('open')
   })
@@ -31,24 +31,73 @@ $(function() {
 
 new Swiper('.team__slider', {
   breakpoints: {
-        // when window width is <= 499px
-        1200: {
-            slidesPerView: 3,
-            spaceBetweenSlides: 30
-        },
+    0: {
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+    },
+    900: {
+      slidesPerView: 4,
+    },
   },
-  // slidesPerView: 4,
   spaceBetween: 30,
+  pagination: {
+    el: '.team__pagination',
+    type: 'bullets',
+  },
   navigation: {
     nextEl: '.team__arrows-right',
     prevEl: '.team__arrows-left',
   },
 })
 new Swiper('.reviews__slider', {
-  slidesPerView: 2,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    900: {
+      slidesPerView: 2,
+    }
+  },
   spaceBetween: 30,
+  pagination: {
+    el: '.reviews__pagination',
+    type: 'bullets',
+  },
   navigation: {
     nextEl: '.reviews__arrows-right',
     prevEl: '.reviews__arrows-left',
   },
 })
+
+const breakpoint = window.matchMedia('(max-width: 768px)')
+
+let mySwiper
+
+const breakpointChecker = () => {
+  if (!breakpoint.matches) {
+    if (mySwiper !== undefined) {
+      mySwiper.destroy(true, true)
+    }
+  } else if (breakpoint.matches) {
+    enableSwiper();
+  }
+}
+
+const enableSwiper = () => {
+  mySwiper = new Swiper('.cert__box', {
+    spaceBetween: 30,
+    slidesPerView: 2,
+    pagination: {
+      el: '.cert__pagination',
+      type: 'bullets',
+    }
+  })
+}
+
+breakpoint.addListener(breakpointChecker)
+breakpointChecker()
