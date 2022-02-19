@@ -255,6 +255,32 @@
       margin-bottom: 30px;
     }
   }
+  
+  .footer {
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    &__links-title {
+      display: none;
+    }
+    &__links-box {
+      display: none;
+    }
+    &__links-text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 100%;
+    }
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 @media (max-width: 768px) {
   .title {
@@ -375,6 +401,9 @@
         opacity: 1;
       }
     }
+  }
+  .contacts {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 500px) {

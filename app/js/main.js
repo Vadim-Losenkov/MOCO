@@ -90,7 +90,7 @@ const breakpointChecker = () => {
 
 const enableSwiper = () => {
   mySwiper = new Swiper('.cert__box', {
-    spaceBetween: 30,
+    spaceBetween: 0,
     slidesPerView: 2,
     pagination: {
       el: '.cert__pagination',
