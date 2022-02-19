@@ -967,6 +967,9 @@
     opacity: 0.8;
     margin-top: 10px;
   }
+  &__links-mobile {
+    display: none;
+  }
   &__links-title {
     font-weight: 600;
     font-size: 18px;
