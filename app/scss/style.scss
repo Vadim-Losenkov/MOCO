@@ -11,6 +11,12 @@
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
     padding: 10px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 50px;
+    z-index: 110;
   }
   &__top-text {
     font-size: 14px;
@@ -57,7 +63,20 @@
     align-items: center;
     padding: 19px 0;
   }
-
+  &__inner {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: all .3s;
+    z-index: 10;
+  }
+  &__inner.header-fixed {
+    top: 0;
+    transition: all .3s;
+    background-color: #fff;
+  }
   &__contact {
     display: flex;
     align-items: center;
@@ -84,12 +103,17 @@
     font-size: 16px;
     line-height: 20px;
     color: #313137;
+    transition: all .3s;
+    border-bottom: 1.5px solid rgba($green, 0);
+    padding: 0 1px;
 
-    &.active {
+    &:hover {
+      transition: all .3s;
       color: $green;
       border-bottom: 1.5px solid $green;
       font-weight: 600;
       border-radius: 1px;
+      padding: 0;
     }
   }
   &__mobile-links {
@@ -142,6 +166,10 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 194px;
+  &__inner {
+    padding-top: 165px;
+    margin-top: -50px;
+  }
   &__box {
     display: flex;
     justify-content: space-between;
@@ -173,6 +201,20 @@
       position: absolute;
       right: -100px;
       top: -34px;
+    }
+    &.video .icon-play,
+    &.video .icon-triangle {
+      transition: all .3s;
+      fill: #313137;
+      stroke: #313137;
+    }
+    &.video:hover {
+      .icon-play,
+      .icon-triangle {
+          transition: all .3s;
+          fill: $green;
+          stroke: $green;
+      }
     }
   }
 
@@ -279,7 +321,7 @@
     max-width: 295px;
     padding: 20px;
     margin-bottom: 20px;
-    &:hover {
+    &.active {
       .product__item-title {
         color: $green;
       }
@@ -427,6 +469,7 @@
 
 .benefits {
   margin-bottom: 110px;
+  overflow: hidden;
   &__title {
     text-align: center;
     margin-bottom: 10px;

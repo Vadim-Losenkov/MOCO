@@ -38,6 +38,9 @@
   .header {
     background: rgba(#ffffff, 0.1);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
+    &__inner {
+      position: static;
+    }
     &__logo {
       width: 116px;
     }
@@ -57,12 +60,18 @@
     &__burger {
       display: flex;
     }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
   }
   .header-mobile {
     display: block;
     z-index: 100;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -94,7 +103,7 @@
       color: #313137;
       margin-bottom: 18px;
 
-      &.active {
+      &:hover {
         font-weight: 600;
         color: #41bf06;
       }
@@ -117,6 +126,10 @@
   }
   .top {
     background: #fff !important;
+    margin-top: 165px;
+    &__inner {
+      padding-top: 0;
+    }
   }
 }
 
