@@ -69,13 +69,14 @@
     left: 0;
     right: 0;
     background-color: transparent;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 10;
   }
   &__inner.header-fixed {
     top: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
   }
   &__contact {
     display: flex;
@@ -103,12 +104,12 @@
     font-size: 16px;
     line-height: 20px;
     color: #313137;
-    transition: all .3s;
+    transition: all 0.3s;
     border-bottom: 1.5px solid rgba($green, 0);
     padding: 0 1px;
 
     &:hover {
-      transition: all .3s;
+      transition: all 0.3s;
       color: $green;
       border-bottom: 1.5px solid $green;
       font-weight: 600;
@@ -133,17 +134,17 @@
       height: 1.5px;
       background-color: #646464;
       border-radius: 1px;
-      transition: all .3s;
+      transition: all 0.3s;
       &:last-child {
         width: 10.5px;
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
 
     &.open {
       span:nth-child(2) {
         opacity: 0;
-        transition: all .3s;
+        transition: all 0.3s;
       }
       span:first-child {
         transform: translateY(7px) rotate(-135deg);
@@ -202,20 +203,52 @@
       right: -100px;
       top: -34px;
     }
-    &.video .icon-play,
-    &.video .icon-triangle {
-      transition: all .3s;
-      fill: #313137;
-      stroke: #313137;
-    }
-    &.video:hover {
-      .icon-play,
+
+    &.video {
+      cursor: pointer;
+      display: flex;
+      font-weight: 300;
+      font-size: 16px;
+      column-gap: 14px;
+      line-height: 20px;
+
+      color: #565656;
+      position: relative;
+      padding-left: 62px;
+      max-width: 230px;
+      svg {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .icon-stroke {
+        transition: all 0.3s;
+        stroke: #313137;
+      }
       .icon-triangle {
-          transition: all .3s;
-          fill: $green;
-          stroke: $green;
+        transition: all 0.3s;
+        fill: #313137;
       }
     }
+    &.video:hover {
+      transition: all 0.3s;
+      .icon-stroke {
+        transition: all 0.3s;
+        stroke: $green;
+      }
+      .icon-triangle {
+        transition: all 0.3s;
+        fill: $green;
+      }
+    }
+  }
+  &__info-linkWrapper {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
   }
 
   &__image {
@@ -306,7 +339,7 @@
   margin-bottom: 40px;
   &__title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 12px;
   }
   &__text {
     text-align: center;
@@ -329,7 +362,7 @@
   }
   &__item-title {
     transition: all 0.3s;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 19px;
     line-height: 23px;
     color: #313137;
@@ -414,7 +447,7 @@
 .troubles {
   padding-bottom: 60px;
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
   &__box {
     display: flex;
@@ -423,12 +456,15 @@
   }
   &__items {
     display: grid;
-    grid-template-columns: minmax(280px, 380px) minmax(280px, 380px);
+    grid-template-columns: minmax(280px, 335px) minmax(280px, 310px);
     grid-gap: 69px;
     margin-left: 60px;
   }
   &__item {
     position: relative;
+    &.item-3 {
+      max-width: 280px;
+    }
   }
   &__item-title {
     font-weight: bold;
@@ -552,13 +588,13 @@
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
-      text-align: center;
+      justify-content: center;
+      text-align: center !important;
 
       color: #ffffff;
     }
   }
   &__table-col {
-    text-align: center;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -574,7 +610,8 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
-      text-align: center;
+      text-align: left;
+      justify-content: flex-start;
       color: #313137;
     }
     &--2 {
@@ -605,6 +642,7 @@
     color: #ffffff;
     border-radius: 61px;
     white-space: nowrap;
+    box-shadow: none;
   }
 
   &__warning {
@@ -676,7 +714,6 @@
     position: relative;
   }
   &__item-image {
-    
   }
   &__item-box {
     padding: 22px 10px;
@@ -714,7 +751,7 @@
 .reviews {
   background-color: #f3f3f3;
   padding: 60px 0;
-  
+
   &__title {
     margin-bottom: 40px;
   }
@@ -740,7 +777,6 @@
     margin-bottom: 9px;
   }
   &__item-text {
-    font-family: Roboto;
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
@@ -751,6 +787,9 @@
     display: flex;
     align-items: center;
     margin-top: auto;
+  }
+  &__item-avatar {
+    flex: none;
   }
   &__item-avatar,
   &__item-avatar img {
@@ -782,9 +821,7 @@
       cursor: pointer;
     }
   }
-  &__arrows {
-    display: none;
-  }
+  
   &__pagination {
     display: none;
   }
@@ -827,33 +864,37 @@
       position: absolute;
       left: 0;
       top: 3px;
-      background-image: url('../images/icons/i.svg');
+      background-image: url("../images/icons/i.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      width: 18px;
-      height: 18px;
+      width: 28px;
+      height: 28px;
     }
-    
+
     &--place::before {
-      background-image: url('../images/icons/green-place.svg');
+      background-image: url("../images/icons/green-place.svg");
     }
     &--phone::before {
-      background-image: url('../images/icons/green-phone.svg');
+      background-image: url("../images/icons/green-phone.svg");
     }
     &--mail::before {
-      background-image: url('../images/icons/green-mail.svg');
+      background-image: url("../images/icons/green-mail.svg");
     }
   }
-  
+
   &__links {
     margin-top: 54px;
     display: flex;
     column-gap: 20px;
   }
-  
+  &__links-item img {
+    width: 40px;
+    height: 40px;
+  }
+
   &__form {
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 30px 36px;
@@ -892,7 +933,7 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
-      color: #182F43;
+      color: #182f43;
       margin-bottom: 10px;
       margin-left: 5px;
     }
@@ -911,7 +952,7 @@
       font-weight: 300;
       font-size: 14px;
       line-height: 16px;
-      color: #6E6B7B;
+      color: #6e6b7b;
       margin-bottom: 9px;
       a {
         text-decoration: underline;
@@ -921,16 +962,16 @@
       color: red;
     }
     input,
-    textarea{
+    textarea {
       width: 100%;
-      background: #FFFFFF;
-      border: 1px solid #D1DBE3;
+      background: #ffffff;
+      border: 1px solid #d1dbe3;
       box-sizing: border-box;
       border-radius: 6px;
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
-      color: #182F43;
+      color: #182f43;
       padding: 10px 16px;
       &::placeholder {
         font-family: Montserrat;
@@ -939,7 +980,7 @@
         font-size: 14px;
         line-height: 21px;
         letter-spacing: 0.005em;
-        color: #9DAFBD;
+        color: #9dafbd;
       }
     }
     textarea {
@@ -1006,7 +1047,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
     margin-top: 10px;
   }
@@ -1017,7 +1058,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 15px;
   }
   &__links-box {
@@ -1031,7 +1072,7 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 20px;
-    color: #B6B6B6;
+    color: #b6b6b6;
     opacity: 0.8;
     max-width: 335px;
   }
@@ -1039,7 +1080,7 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    color: #B6B6B6;
+    color: #b6b6b6;
   }
   &__bottom {
     margin-top: 70px;
@@ -1055,14 +1096,20 @@
       font-size: 14px;
       line-height: 17px;
       text-decoration-line: underline;
-      color: #FFFFFF;
+      color: #ffffff;
       opacity: 0.8;
     }
     &.copy {
       font-weight: normal;
       font-size: 16px;
       line-height: 19px;
-      color: #FFFFFF;
+      color: #ffffff;
+    }
+    &.dev {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #6FF032;
     }
   }
 }

@@ -25,7 +25,7 @@ $(function () {
     $('.header-mobile').removeClass('open')
   })
   
-  $('.header__menu-link, .header-mobile__menu-link').on('click', function (e) {
+  $('.header__menu-link, .header-mobile__menu-link, .header__logo').on('click', function (e) {
     e.preventDefault()
     const sectionID = $(this).attr('href')
 
@@ -100,11 +100,7 @@ const breakpointChecker = () => {
 const enableSwiper = () => {
   mySwiper = new Swiper('.cert__box', {
     spaceBetween: 0,
-    slidesPerView: 2,
-    pagination: {
-      el: '.cert__pagination',
-      type: 'bullets',
-    }
+    slidesPerView: 2
   })
 }
 

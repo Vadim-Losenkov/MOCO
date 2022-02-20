@@ -2,7 +2,7 @@
 @import "libs/magnific-popup";
 @import "libs/rateyo";
 @import "libs/swiper-bundle";
-@import "libs/jquery.fancybox";
+// @import "libs/jquery.fancybox";
 
 
 .mfp-zoom-in .mfp-with-anim {
@@ -52,12 +52,22 @@
 }
 
 .user-popup {
-  // .mfp-close {
-  //   display: none !important;
-  // }
   background-color: #fff;
   border-radius: 21px;
   max-width: 500px;
   margin: 0 auto;
   margin-top: 50px;
+}
+
+.cert-popup {
+  margin: 0 auto;
+  max-width: 400px;
+  img {
+    height: 70vh;
+  }
+  &__inner  {
+  }
+  .mfp-close {
+    display: none !important;
+  }
 }
