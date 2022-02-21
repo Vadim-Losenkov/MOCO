@@ -30,11 +30,13 @@ $(function () {
     const sectionID = $(this).attr('href')
 
     $('html, body').animate({
-      scrollTop: $(sectionID).offset().top - 200
+      scrollTop: $(sectionID).offset().top - 150
     }, {
       duration: 500,
     });
   })
+  
+  $('.quiz-select').niceSelect()
 })
 
 

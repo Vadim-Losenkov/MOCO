@@ -178,17 +178,17 @@
           <div class="top__info">
             <h1 class="top__info-title">
               Бухгалтерские <br>
-              услуги для ИП и ООО
+              услуги для ИП и&nbsp;ООО
             </h1>
             <p class="top__info-text">
               Берем на себя ведение бухгалтерии, <br>
               освобождая Ваше время для развития бизнеса.
             </p>
             <div class="top__info-linkWrapper">
-              <a href="#" class="top__info-link green-button">
+              <a href="#popup-quiz" data-effect="mfp-zoom-in" class="open-popup top__info-link green-button">
                 Рассчитать стоимость
               </a>
-              <a href="#" class="top__info-link video">
+              <a href="https://youtu.be/lyh2kAjcmSY" data-fancybox class="top__info-link video">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle class="icon-stroke" cx="25" cy="25" r="24.5" fill="white" stroke="black" />
                   <path class="icon-triangle" fill-rule="evenodd" clip-rule="evenodd"
@@ -1390,6 +1390,44 @@
       </a>
     </form>
   </div>
+  <div id="popup-quiz" class="user-popup mfp-with-anim mfp-hide">
+    <form class="contacts__form">
+      <h6 class="contacts__form-title">
+        Квиз
+      </h6>
+      <div class="contacts__form-input">
+        <p class="contacts__form-input--text">
+          Форма собственности<span>*</span>
+        </p>
+        <select class="quiz-select">
+          <option value="1">ООО</option>
+          <option value="2">ИП</option>
+          <option value="3">Другое</option>
+        </select>
+      </div>
+      <div class="contacts__form-input">
+        <p class="contacts__form-input--text">
+          Телефон<span>*</span>
+        </p>
+        <input type="tel" placeholder="Ваш телефон" class="contacts__form-input--field">
+      </div>
+      <div class="contacts__form-input">
+        <p class="contacts__form-input--text">
+          Комментарий
+        </p>
+        <textarea class="contacts__form-input--area" placeholder="Комментарий"></textarea>
+      </div>
+      <div class="contacts__form-input checkbox">
+        <input class="contacts__form-input--checkbox" type="checkbox">
+        <p class="contacts__form-input--agree">
+          Я согласен(а) на <a href="#">обработку персональных данных</a>
+        </p>
+      </div>
+      <a href="#popup-true" data-effect="mfp-zoom-in" class="open-popup contacts__form-button green-button">
+        Оставить заявку
+      </a>
+    </form>
+  </div>
   <div id="popup-true" class="user-popup mfp-with-anim mfp-hide">
     <form class="contacts__form">
       <img class="contacts__form-icon" src="images/icons/true.svg" alt="">
@@ -1432,6 +1470,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

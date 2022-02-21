@@ -262,7 +262,7 @@
     box-shadow: 0px 15px 80px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     display: flex;
-    padding: 0 10px;
+    padding: 24px 26px;
     padding-bottom: 27px;
     padding-top: 47px;
     justify-content: space-between;
@@ -961,8 +961,19 @@
     span {
       color: red;
     }
+    .quiz-select {
+      margin-bottom: 30px;
+      .list {
+        width: 100%;
+        max-width: 100%;
+      }
+      .current {
+        color: #000;
+      }
+    }
     input,
-    textarea {
+    textarea,
+    .quiz-select {
       width: 100%;
       background: #ffffff;
       border: 1px solid #d1dbe3;
@@ -999,7 +1010,7 @@
 
 .cert {
   overflow: hidden;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   &__title {
     margin-bottom: 40px;
   }
