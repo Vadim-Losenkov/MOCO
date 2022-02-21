@@ -1391,40 +1391,82 @@
     </form>
   </div>
   <div id="popup-quiz" class="user-popup mfp-with-anim mfp-hide">
+
+<!-- Далее:
+Мы рассчитали стоимость!
+В какой мессенджера вам отправить предложение?
+Далее выбор воцап, телеграмм
+Далее окошко для ввода номера
+Далее Мы свяжемся с Вами в ближайшее время! -->
     <form class="contacts__form">
       <h6 class="contacts__form-title">
         Квиз
       </h6>
-      <div class="contacts__form-input">
+      <div class="contacts__form-input quiz-s">
         <p class="contacts__form-input--text">
           Форма собственности<span>*</span>
         </p>
         <select class="quiz-select">
           <option value="1">ООО</option>
           <option value="2">ИП</option>
-          <option value="3">Другое</option>
+          <option value="more">Другое</option>
+        </select>
+        <input type="text" placeholder="Форма собственности" class="contacts__form-input--field quiz-input">
+      </div>
+      <div class="contacts__form-input quiz-s">
+        <p class="contacts__form-input--text">
+          Система налогообложения<span>*</span>
+        </p>
+        <select class="quiz-select">
+          <option value="1">ОСНО (НДС)</option>
+          <option value="2">УСН 6%</option>
+          <option value="2">УСН 15%</option>
+          <option value="2">Патент</option>
         </select>
       </div>
-      <div class="contacts__form-input">
+      <div class="contacts__form-input quiz-s">
         <p class="contacts__form-input--text">
-          Телефон<span>*</span>
+          Вид деятельности<span>*</span>
         </p>
-        <input type="tel" placeholder="Ваш телефон" class="contacts__form-input--field">
+        <select class="quiz-select">
+          <option value="1">Торговля</option>
+          <option value="2">Производство</option>
+          <option value="2">Услуги</option>
+          <option value="more">Другое</option>
+        </select>
+        <input type="text" placeholder="Вид деятельности" class="contacts__form-input--field quiz-input">
       </div>
-      <div class="contacts__form-input">
+      <div class="contacts__form-input quiz-s">
         <p class="contacts__form-input--text">
-          Комментарий
+          Кол-во сотрудников<span>*</span>
         </p>
-        <textarea class="contacts__form-input--area" placeholder="Комментарий"></textarea>
+        <select class="quiz-select">
+          <option value="1">Нет сотрудников</option>
+          <option value="2">1</option>
+          <option value="2">2 - 4</option>
+          <option value="2">5 - 7</option>
+          <option value="2">8 - 10</option>
+          <option value="more">Другое</option>
+        </select>
+        <input type="text" placeholder="Кол-во сотрудников" class="contacts__form-input--field quiz-input">
       </div>
-      <div class="contacts__form-input checkbox">
-        <input class="contacts__form-input--checkbox" type="checkbox">
-        <p class="contacts__form-input--agree">
-          Я согласен(а) на <a href="#">обработку персональных данных</a>
+      <div class="contacts__form-input quiz-s">
+        <p class="contacts__form-input--text">
+          Среднее кол-во операций в месяц (покупки, продажи, платежи)<span>*</span>
         </p>
+        <select class="quiz-select">
+          <option value="2">До 20</option>
+          <option value="2">21 - 30</option>
+          <option value="2">31 - 50</option>
+          <option value="2">51 - 80</option>
+          <option value="2">81 - 100</option>
+          <option value="more">Другое</option>
+        </select>
+        <input type="text" placeholder="Кол-во операций" class="contacts__form-input--field quiz-input">
+      
       </div>
-      <a href="#popup-true" data-effect="mfp-zoom-in" class="open-popup contacts__form-button green-button">
-        Оставить заявку
+      <a href="#popup-quiz-next" data-effect="mfp-zoom-in" class="open-popup contacts__form-button green-button">
+        Перейти
       </a>
     </form>
   </div>
@@ -1436,6 +1478,40 @@
       </h6>
       <p class="contacts__form-text true">
         Введите свои контактные данные, оставьте комментарий и мы свяжемся с Вами в самое ближайшее время!
+      </p>
+    </form>
+  </div>
+  <div id="popup-quiz-next" class="user-popup mfp-with-anim mfp-hide">
+    <form class="contacts__form">
+<!-- Далее выбор воцап, телеграмм
+Далее окошко для ввода номера
+Далее Мы свяжемся с Вами в ближайшее время! -->
+      <h6 class="contacts__form-title true">
+        Мы рассчитали стоимость
+      </h6>
+      <div class="contacts__form-input quiz-s">
+        <p class="contacts__form-input--text">
+          В какой мессенджер вам отправить предложение?<span>*</span>
+        </p>
+        <select class="quiz-select">
+          <option value="2">Telegram</option>
+          <option value="2">Whatsapp</option>
+        </select>
+        <input type="tel" placeholder="Номер телефона" class="contacts__form-input--field num">
+      </div>
+      <a href="#popup-quiz-true" data-effect="mfp-zoom-in" class="open-popup contacts__form-button green-button">
+        Далее
+      </a>
+    </form>
+  </div>
+  <div id="popup-quiz-true" class="user-popup mfp-with-anim mfp-hide">
+    <form class="contacts__form">
+      <img class="contacts__form-icon" src="images/icons/true.svg" alt="">
+      <h6 class="contacts__form-title true">
+        Заявка отправлена
+      </h6>
+      <p class="contacts__form-text true">
+        Мы свяжемся с Вами в самое ближайшее время!
       </p>
     </form>
   </div>

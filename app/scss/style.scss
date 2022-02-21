@@ -961,6 +961,18 @@
     span {
       color: red;
     }
+    .quiz-input {
+      transform: translateY(-25px);
+      outline: none;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .num {
+      transform: translateY(-25px);
+      outline: none;
+    }
     .quiz-select {
       margin-bottom: 30px;
       .list {

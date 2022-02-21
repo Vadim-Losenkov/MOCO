@@ -37,6 +37,18 @@ $(function () {
   })
   
   $('.quiz-select').niceSelect()
+
+  $('.quiz-s').on('click', function(e) {
+    setTimeout(() => {
+      const $quiz = this.querySelector('[data-value="more"]')?.classList.contains('selected')
+      if ($quiz) {
+        this.querySelector('.quiz-input').classList.add('active')
+      } else {
+        this.querySelector('.quiz-input').classList.remove('active')
+        this.querySelector('.quiz-input').value = ''
+      }
+    }, 0)
+  })
 })
 
 
