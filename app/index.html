@@ -1352,9 +1352,8 @@
       </div>
     </div>
   </footer>
-  <!--<start-form></start-form>-->
   <div id="popup-request" class="user-popup mfp-with-anim mfp-hide">
-    <form class="contacts__form">
+    <form class="contacts__form" data-popup="form">
       <h6 class="contacts__form-title">
         Отправьте заявку
       </h6>
@@ -1365,12 +1364,22 @@
         <p class="contacts__form-input--text">
           ФИО<span>*</span>
         </p>
-        <input type="text" placeholder="Ваше имя" class="contacts__form-input--field">
+        <div class="contacts__form-inputWrapper">
+          <div class="contacts__form-inputInner">
+            <input type="text" placeholder="Ваше имя" class="contacts__form-input--field">
+          </div>
+          <div class="contacts__form__input status"></div>
+        </div>
       </div>
       <div class="contacts__form-input">
         <p class="contacts__form-input--text">
           Телефон<span>*</span>
         </p>
+        <div class="contacts__form-inputWrapper">
+          <div class="contacts__form-inputInner">
+            
+          </div>
+        </div>
         <input type="tel" placeholder="Ваш телефон" class="contacts__form-input--field">
       </div>
       <div class="contacts__form-input">
