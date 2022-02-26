@@ -17,6 +17,16 @@ $(function () {
     },
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
+  $('.true-popup').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+      beforeOpen: function () {
+        this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
 
   $('.header__burger').on('click', function (e) {
     $('.header-mobile').toggleClass('open')
@@ -24,7 +34,7 @@ $(function () {
   $('.header-mobile__close, .header-mobile__menu-link').on('click', function (e) {
     $('.header-mobile').removeClass('open')
   })
-  
+
   $('.header__menu-link, .header-mobile__menu-link, .header__logo').on('click', function (e) {
     e.preventDefault()
     const sectionID = $(this).attr('href')
@@ -35,10 +45,10 @@ $(function () {
       duration: 500,
     });
   })
-  
+
   $('.quiz-select').niceSelect()
 
-  $('.quiz-s').on('click', function(e) {
+  $('.quiz-s').on('click', function (e) {
     setTimeout(() => {
       const $quiz = this.querySelector('[data-value="more"]')?.classList.contains('selected')
       if ($quiz) {
@@ -49,6 +59,60 @@ $(function () {
       }
     }, 0)
   })
+
+  $('[data-popup="form-up"]').validate({
+    errorClass: 'invalid-field',
+    rules: {
+      name : {
+        required: true,
+      },
+      tel : {
+        required: true,
+        minlength: 11,
+      },
+      // email: {
+      //   required: true,
+      //   email: true
+      // },
+      // password: {
+      //   required: true,
+      //   minlength: 5,
+      // },
+      // rePassword: {
+      //   required: true,
+      //   minlength: 5,
+      // },
+    },
+    messages: {
+      tel: {
+        required: `<p class="input-error">Введите номер телефона</p>`,
+        minlength: jQuery.validator.format(`<p class="input-error">Минимум {0} символов</p>`)
+      },
+      name: {
+        required: `<p class="input-error">Введите ваше имя</p>`,
+      },
+      rePassword: {
+        required: `<p class="input-error">Введите пароль</p>`,
+        minlength: jQuery.validator.format(`<p class="input-error">Минимум {0} символов</p>`)
+      },
+      email: {
+        required: `<p class="input-error">Введите E-mail</p>`,
+        email: `<p class="input-error">Введите корректный E-mail</p>`
+      },
+    },
+    // the errorPlacement has to take the table layout into account
+    errorPlacement: function (error, element) {
+      error.appendTo(element.parent().next());
+    },
+    // specifying a submitHandler prevents the default submit, good for the demo
+    submitHandler: function (e) {
+      $('.true-popup').magnificPopup('open')
+    },
+    // set this class to error-labels to indicate valid fields
+    success: function (element) {
+      console.log('success-form');
+    }
+  });
 })
 
 
@@ -121,9 +185,9 @@ const enableSwiper = () => {
 breakpoint.addListener(breakpointChecker)
 breakpointChecker()
 
-window.onscroll = function showHeader () {
+window.onscroll = function showHeader() {
   var headerNavigation = document.querySelector('.header__inner');
-  if(window.pageYOffset > 50){
+  if (window.pageYOffset > 50) {
     headerNavigation.classList.add('header-fixed')
   } else {
     headerNavigation.classList.remove('header-fixed')

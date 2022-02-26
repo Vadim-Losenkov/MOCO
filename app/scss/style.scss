@@ -900,6 +900,10 @@
     padding: 30px 36px;
     max-width: 500px;
     width: 100%;
+    .input-error {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__form-icon {
     margin-bottom: 34px;

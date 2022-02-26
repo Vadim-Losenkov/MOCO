@@ -1353,7 +1353,7 @@
     </div>
   </footer>
   <div id="popup-request" class="user-popup mfp-with-anim mfp-hide">
-    <form class="contacts__form" data-popup="form">
+    <form class="contacts__form" data-popup="form-up">
       <h6 class="contacts__form-title">
         Отправьте заявку
       </h6>
@@ -1366,7 +1366,7 @@
         </p>
         <div class="contacts__form-inputWrapper">
           <div class="contacts__form-inputInner">
-            <input type="text" placeholder="Ваше имя" class="contacts__form-input--field">
+            <input type="text" id="name" name="name" placeholder="Ваше имя" class="contacts__form-input--field">
           </div>
           <div class="contacts__form__input status"></div>
         </div>
@@ -1377,26 +1377,36 @@
         </p>
         <div class="contacts__form-inputWrapper">
           <div class="contacts__form-inputInner">
-            
+            <input type="tel" id="tel" name="tel" placeholder="Ваш телефон" class="contacts__form-input--field">
           </div>
+          <div class="contacts__form__input status"></div>
         </div>
-        <input type="tel" placeholder="Ваш телефон" class="contacts__form-input--field">
       </div>
       <div class="contacts__form-input">
         <p class="contacts__form-input--text">
           Комментарий
         </p>
-        <textarea class="contacts__form-input--area" placeholder="Комментарий"></textarea>
+        <div class="contacts__form-inputWrapper">
+          <div class="contacts__form-inputInner">
+            <textarea class="contacts__form-input--area" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="contacts__form__input status"></div>
+        </div>
       </div>
       <div class="contacts__form-input checkbox">
-        <input class="contacts__form-input--checkbox" type="checkbox">
+        <div class="contacts__form-inputWrapper">
+          <div class="contacts__form-inputInner">
+            <input id="check" name="check" class="contacts__form-input--checkbox" type="checkbox">
+          </div>
+          <div class="contacts__form__input status"></div>
+        </div>
         <p class="contacts__form-input--agree">
           Я согласен(а) на <a href="#">обработку персональных данных</a>
         </p>
       </div>
-      <a href="#popup-true" data-effect="mfp-zoom-in" class="open-popup contacts__form-button green-button">
+      <button type="submit" class="open-popup contacts__form-button green-button">
         Оставить заявку
-      </a>
+      </button>
     </form>
   </div>
   <div id="popup-quiz" class="user-popup mfp-with-anim mfp-hide">
@@ -1538,10 +1548,12 @@
     <div class="cert-popup__inner">
       <img src="images/content/cert/item-5.jpg" alt="">
     </div>
+    <a href="#popup-true" data-effect="mfp-zoom-in" class="true-popup"></a>
   </div>
 
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/validete.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
